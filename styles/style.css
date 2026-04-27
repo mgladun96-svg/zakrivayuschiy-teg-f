@@ -76,7 +76,7 @@
 .card__title {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-weight: var(--title-text-weight);
+  font-variation-settings: 'wght' 715;
   color: var(--card__title-text-color);
   justify-self: start;
   align-self: center;
@@ -150,7 +150,7 @@
 .card__text {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-weight: var(--article-text-weight);
+  font-variation-settings: 'wght' 410;
   line-height: 116%;
   color: var(--card__text-color);
   justify-self: start;

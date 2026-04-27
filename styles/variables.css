@@ -2,8 +2,6 @@
 :root {
   --main-font: 'Inter-Variable';
   --accent-font: 'PressStart2P-Regular';
-  --title-text-weight: 715;
-  --article-text-weight: 410;
   --background-image: 
     repeating-linear-gradient(90deg, #d3d3d3, rgb(211 211 211 / 0) 4px),
     repeating-linear-gradient(0deg, #d3d3d3, rgb(211 211 211 / 0) 4px), 
