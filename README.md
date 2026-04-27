@@ -1,1 +1,1 @@
-https://mgladun96-svg.github.io/zakrivayuschiy-teg-f/
+https://github.com/mgladun96-svg/zakrivayuschiy-teg-f
