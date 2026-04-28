@@ -9,12 +9,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-*, ::before, ::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -25,9 +19,7 @@
   max-width: 1440px;
   width: 100%;
   height: 100%;
-  min-height: 960px;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 .header {
@@ -37,19 +29,19 @@
   padding-right: clamp(16px, 16px + (122.5 - 16) * ((100vw - 375px) / 1065), 122.5px);
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 94px;
+  margin-block-end: 94px;
   text-align: center;
 }
 
 .block {
-  width: clamp(375px, 100%, 700px);
+  inline-size: clamp(375px, 100%, 700px);
   height: min-content;
   background-color: var(--block__bg-color);
   border: solid 2px var(--block__border-color);
 }
 
 .title {
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-size: clamp(49px, 49px + (65 - 49) * ((100vw - 375px) / 325), 65px);
   color: var(--title__text-color);
   margin: auto;
@@ -76,7 +68,7 @@
 .card__title {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-variation-settings: 'wght' 715 'wdth' 351;
+  font-variation-settings: 'wght' 715, 'wdth' 351;
   color: var(--card__title-text-color);
   justify-self: start;
   align-self: center;
@@ -94,36 +86,32 @@
   border-bottom: solid 2px var(--image__border-color);
 }
 
-.inspiration {
-  filter: saturate(120%);
+.saturate {
+  filter: saturate(90%);
 }
 
-.fear {
+.hue-rotate {
   filter: hue-rotate(180deg);
 }
 
-.victory {
+.contrast {
   filter: contrast(120%);
 }
 
-.concentration {
+.invert {
   filter: invert(10%);
 }
 
-.students {
+.brightness {
   filter: brightness(90%);
 }
 
-.waiting {
+.sepia {
   filter: sepia(10%);
 }
 
 .meditation {
   filter: grayscale(0.1);
-}
-
-.calm {
-  filter: invert(10%) contrast(150%) saturate(90%);
 }
 
 .label {
@@ -132,7 +120,7 @@
   top: 27px;
   right: 25px;
   mix-blend-mode: hard-light;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   color: var(--title__text-color);
   text-shadow: 0 0 2px var(--label__stroke-color);
@@ -150,7 +138,7 @@
 .card__text {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-variation-settings: 'wght' 410 'wdth' 321;
+  font-variation-settings: 'wght' 410, 'wdth' 321;
   line-height: 116%;
   color: var(--card__text-color);
   justify-self: start;
@@ -164,7 +152,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
 }
 
 .card__icon-button {
@@ -180,7 +168,6 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--button_outline-color);
-  transition: 0.3s ease;
 }
 
 .contour {
@@ -232,7 +219,7 @@
 
 .like-icon.is-liked .heart {
   transform-origin: center;
-  animation: scale 0.3s ease-in;
+  animation: scale 0.3s 0.1s ease-in;
 }
 
 .sparks {
@@ -240,7 +227,7 @@
 }
 
 .like-icon.is-liked .sparks {
-  animation: opacity 0.3s ease-in;
+  animation: opacity 0.3s 0.3s ease-in;
 }
 
 .button {
@@ -255,7 +242,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 2px currentColor;
-  transition: 0.3s ease;
 }
 
 .button::before {
@@ -271,7 +257,6 @@
 
 .button:hover::before {
   width: 100%;
-  transition: width 0.5s ease-in-out;
 }
 
 .card__like-button {
@@ -280,7 +265,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
   color: var(--text-accent-color);
   position: relative;
@@ -294,6 +279,7 @@
   align-items: center;
   gap: 12px;
   padding: 17px 20px;
+  margin-block-end: 100px;
 }
 
 .floppy {
@@ -314,7 +300,6 @@ body:has(.button-save[open]) {
 
 .dialog {
   width: 353px;
-  height: 191px;
   padding: 30px;
   margin: auto;
 }
@@ -347,9 +332,18 @@ dialog::backdrop {
   margin-top: 30px;
 }
 
+.uppercase__text {
+  text-transform: uppercase;
+}
+
 @media (width <= 375px) {
   .button-save {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .floppy {
+  width: 28px;
+  height: 28px;
   }
 }
