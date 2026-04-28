@@ -114,8 +114,8 @@
   filter: grayscale(0.1);
 }
 
-.mixed { 
-  filter: invert(10%) contrast(150%) saturate(90%); 
+.mixed {
+  filter: invert(10%) contrast(150%) saturate(90%);
 }
 
 .label {
