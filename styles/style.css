@@ -156,7 +156,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+  gap: 5px;
 }
 
 .card__icon-button {
@@ -172,6 +172,7 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--button_outline-color);
+  outline-offset: -4px;
 }
 
 .contour {
@@ -264,8 +265,8 @@
 }
 
 .card__like-button {
-  width: 130px;
-  height: 40px;
+  width: 126px;
+  height: 34px;
 }
 
 .button__text {
